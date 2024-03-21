@@ -13,7 +13,7 @@ spec:
     ##  - we use the 'deploykf/deploykf' repo so we can read its 'sample-values.yaml'
     ##    file, but you may use any repo (even one with no files)
     ##
-    repoURL: "https://github.com/paravatha/deployKF.git"
+    repoURL: "https://github.com/deployKF/deployKF.git"
     targetRevision: "v0.1.4" # <-- replace with a deployKF repo tag!
     path: "."
 
@@ -127,13 +127,46 @@ spec:
               ##                 katib
               ## --------------------------------------
               katib:
-                {} # <-- REMOVE THIS, IF YOU INCLUDE VALUES UNDER THIS SECTION!
+                enabled: false
+                
+              tensorboards:
+                enabled: false  
 
+              training_operator:
+                enabled: false
+                
               ## --------------------------------------
               ##               notebooks
               ## --------------------------------------
               notebooks:
-                {} # <-- REMOVE THIS, IF YOU INCLUDE VALUES UNDER THIS SECTION!
+                spawnerFormDefaults:              
+                  ## GPU/Device-Plugin Resources
+                  ##
+                  gpus:
+                    readOnly: false
+            
+                    ## configs for gpu/device-plugin limits of the container
+                    ## https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/#using-device-plugins
+                    value:
+                      ## the `limitKey` of the default vendor
+                      ## (to have no default, set as "")
+                      vendor: "NVIDIA"
+            
+                      ## the list of available vendors in the dropdown
+                      ##  `limitsKey` - what will be set as the actual limit
+                      ##  `uiName` - what will be displayed in the dropdown UI
+                      #vendors: []
+                      vendors:
+                        - limitsKey: "nvidia.com/gpu"
+                          uiName: "NVIDIA"
+                        - limitsKey: "amd.com/gpu"
+                          uiName: "AMD"
+            
+                      ## the default value of the limit
+                      ## (possible values: "none", "1", "2", "4", "8")
+                      num: "1"
+
+
 
               ## --------------------------------------
               ##               pipelines
