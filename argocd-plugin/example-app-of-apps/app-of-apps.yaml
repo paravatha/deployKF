@@ -13,7 +13,7 @@ spec:
     ##  - we use the 'deploykf/deploykf' repo so we can read its 'sample-values.yaml'
     ##    file, but you may use any repo (even one with no files)
     ##
-    repoURL: "https://github.com/deployKF/deployKF.git"
+    repoURL: "https://github.com/paravatha/deployKF.git"
     targetRevision: "v0.1.4" # <-- replace with a deployKF repo tag!
     path: "."
 

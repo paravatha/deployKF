@@ -547,7 +547,7 @@ kubeflow_tools:
   ##                 katib
   ## --------------------------------------
   katib:
-    enabled: true
+    enabled: false
 
     ## mysql connection configs
     ##  - if `useExternal` is true, katib will use the specified external mysql database
