@@ -712,14 +712,14 @@ kubeflow_tools:
   ##             tensorboards
   ## --------------------------------------
   tensorboards:
-    enabled: true
+    enabled: false
 
 
   ## --------------------------------------
   ##           training-operator
   ## --------------------------------------
   training_operator:
-    enabled: true
+    enabled: false
 
 
   ## --------------------------------------
