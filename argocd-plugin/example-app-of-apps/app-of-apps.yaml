@@ -76,13 +76,13 @@ spec:
                   istioBase:
                     name: base
                     ## NOTE: this version should be aligned with `deploykf_core.deploykf_istio_gateway.charts.istioGateway.version`
-                    version: 1.20.4
+                    version: 1.21.0
                     repository: https://istio-release.storage.googleapis.com/charts
             
                   istioDaemon:
                     name: istiod
                     ## NOTE: this version should be aligned with `deploykf_core.deploykf_istio_gateway.charts.istioGateway.version`
-                    version: 1.20.4
+                    version: 1.21.0
                     repository: https://istio-release.storage.googleapis.com/charts
 
               ## --------------------------------------
@@ -117,7 +117,7 @@ spec:
                     enabled: true
                     name: gateway
                     ## NOTE: this version should be aligned with `deploykf_dependencies.istio.charts.istioDaemon.version`
-                    version: 1.20.4
+                    version: 1.21.0
                     repository: https://istio-release.storage.googleapis.com/charts
 
               ## --------------------------------------
