@@ -26,7 +26,7 @@ ARGOCD_SERVER_URL=""
 #  - If password is empty, and username is "admin", the 'argocd-initial-admin-secret' will be read from the cluster.
 #    This will NOT work if you have changed the ArgoCD admin password.
 ARGOCD_USERNAME="admin"
-ARGOCD_PASSWORD=""
+ARGOCD_PASSWORD="9yRZ3AWCcZmdcKGp"
 
 # how to handle resources that require pruning
 #  - 'always': prune resources without prompting (DANGER: this can delete resources that are still in use)

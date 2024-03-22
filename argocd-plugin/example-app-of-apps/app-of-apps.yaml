@@ -70,6 +70,7 @@ spec:
               ##                 istio
               ## --------------------------------------
               istio:
+                enabled: true
                 ## chart overrides
                 ##
                 charts:
